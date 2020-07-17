@@ -74,8 +74,6 @@ For installing requirements and initial setup, run: `./env-setup.sh`
 `./scripts/get-monolingual-data.sh [lang-id]` 
 
 
-
-
 - Parallel Data (Opus data of differen corpus)
 
 `./scripts/get-opus-data.sh [src-lang-id] [tgt-lang-id] ['corpus-1 corpus-2 corpus-n']`
@@ -84,6 +82,11 @@ For installing requirements and initial setup, run: `./env-setup.sh`
 - For evaluation (out-of-domain), we use [Ted Talks](https://wit3.fbk.eu/mono.php?release=XML_releases&tinfo=cleanedhtml_ted) data:
 
 `./scripts/get-ted-data.sh [src-lang-id] [tgt-lang-id]`
+
+
+To skip to data processing, download prepared [data](https://drive.google.com/file/d/1yZMm5UdmiF5sSJjFsIfROGzwmMPwCgQZ/view?usp=sharing) 
+
+- The monolingual data provided in this repo includes segments extracted from wikipedia. However, in the paper we also used monolingual data (specifically for Amharic, Oromo, Somali, and Tigrigna languages) from the [HaBiT](https://corpora.fi.muni.cz/habit/index.html) corpus. If you would like to access and include this data please refer [HaBiT](https://corpora.fi.muni.cz/habit/index.html), and make sure to cite their work.
 
 
 
@@ -142,8 +145,5 @@ To train a multilingual model, simply change number of provided pairs in the Bui
 
 
 ### Note
-
-- The monolingual data provided in this repo includes segments extracted from wikipedia. However, in the paper we also used monolingual data (specifically for Amharic, Oromo, Somali, and Tigrigna languages) from the [HaBiT](https://corpora.fi.muni.cz/habit/index.html) corpus. If you would like to access and include this data please refer [HaBiT](https://corpora.fi.muni.cz/habit/index.html), and make sure to cite their work.
-
 
 - If you are working on one of the five languages or in general on low-resource languages, and if have a question, discussion, or looking for a collaboration dont hesitate to reach out. 

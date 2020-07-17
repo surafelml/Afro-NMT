@@ -1,0 +1,50 @@
+# MODEL DIR
+model_dir: model 
+
+
+# DATA
+data:
+    train_features_file: train.src
+    train_labels_file: train.tgt
+    eval_features_file: dev.src
+    eval_labels_file: dev.tgt
+    source_vocabulary: vocab
+    target_vocabulary: vocab
+
+
+# TRAINING PARAMS
+train:
+  batch_size: 4096
+  batch_type: tokens 
+  effective_batch_size: 25000   # Tune gradient accumulation to train with at least this effective batch size
+  save_checkpoints_steps: 5000 
+  keep_checkpoint_max: 2
+  save_summary_steps: 100
+  max_step: 1000000
+  single_pass: false            # a single pass over the training data
+  average_last_checkpoints: 0   # model/avg
+
+
+# EVALUATION PARAMS
+eval:
+  batch_size: 32
+  steps: 5000
+  save_eval_predictions: false  
+  external_evaluators: bleu     # sacreBLEU, BLEU, BLEU-detok, ROUGE
+  early_stopping:
+    metric: bleu                # bleu, loss
+    min_improvement: 0.01
+    steps: 4
+
+# INFERENCE PARAMS
+infer:
+  batch_size: 64
+  batch_type: examples 
+  length_bucket_width: 5
+  with_scores: false
+  with_alignments: null
+
+
+# MODEL/OPTIM PARAMS
+params:
+  beam_width: 5
