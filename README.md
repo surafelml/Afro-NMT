@@ -119,7 +119,7 @@ __Preprocess Data:__
 `./train.sh [exp-dir] [exp-id] [gpu/device-id]` 
 
 
-To train a multilingual model, simply change number of provided pairs in the Build Training Data step, followed by the same training steps as in the baseline. For furtherr details on training a transfer-learning model see [dynamic transfer-learning repo.](https://github.com/surafelml/tl-mnmt)
+To train a multilingual model, simply change number of provided pairs in the Build Training Data step, followed by the same training steps as in the baseline. For furtherr details on training a transfer-learning model see [dynamic transfer-learning repo.](https://github.com/surafelml/adapt-mnmt)
 
 
 
